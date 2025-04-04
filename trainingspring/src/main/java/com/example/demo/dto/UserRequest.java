@@ -13,20 +13,17 @@ import lombok.Data;
  */
 @Data
 public class UserRequest implements Serializable {
-
   /**
    * 名前
    */
   @NotEmpty(message = "名前を入力してください")
   @Size(max = 100, message = "名前は100桁以内で入力してください")
   private String name;
-
   /**
    * 住所
    */
   @Size(max = 255, message = "住所は255桁以内で入力してください")
   private String address;
-
   /**
    * 電話番号
    */
